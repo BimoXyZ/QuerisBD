@@ -42,7 +42,47 @@ CREATE TABLE tblventa(
 ventaId int not null,
 fecha date not null,
 clienteId int not null,
+empleadoId int not null,
 constraint pk_tblventa
+primary key(ventaId),
+constraint fk_tblventa_tblcliente
+foreign key (clienteId)
+references tblcliente(clienteId),
+constraint fk_tblventa_tblempleado
+foreign key (empleadoId)
+references tblempleado(empleadoId)
+)
+go
 
+--Crear la Tabla Producto
+CREATE TABLE tblproducto(
+productoId int not null,
+descripcion varchar (200) not null,
+existencia int not null,
+precioUni decimal(10,2) not null,
+ventaId int not null,
+empleadoId int not null,
+constraint pk_productoId
+primary key (productoId),
+constraint fk_tblproducto_tbldetaven
+foreign key (empleadoId)
+references tblcliente(clienteId)
+)
+go
+
+--Crear la Tabla Detalle_Venta
+CREATE TABLE tbldetaven(
+ventaId int not null,
+productoId int not null,
+cantidad int not null,
+precio decimal (10,2) not null,
+constraint pk_tbldetven
+primary key(ventaId, productoId),
+constraint fk_tblventa
+foreign key (ventaId)
+references tblventa(ventaId),
+constraint fk_tblproducto
+foreign key (productoId)
+references tblproducto(productoId)
 )
 go
