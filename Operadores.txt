@@ -1,0 +1,37 @@
+---------------------------------------------------------
+|		OPERADORES				|
+|-------------------------------------------------------|
+|ARITMETICOS	|	RELACIONALES	|	LOGICOS |
+|    +		|		<	|	AND	|
+|    -		|		>	|	OR	|
+|    *		|		<=	|	NOT	|
+|    /		|		>=	|		|
+|		|		=	|		|
+|---------------------------------------------------------
+
+PRECIO = 10
+-------------|-------
+PRECIO >= 11 | False
+PRECIO = 10  | True
+PRECIO < 10  | False
+PRECIO <= 10 | True
+
+    AND	    |
+------------|----
+TRUE TRUE   |TRUE   
+TRUE FALSE  |FALSE  
+FALSE TRUE  |FALSE  
+FALSE FALSE |FALSE  
+
+
+     OR	    |
+------------|----
+TRUE TRUE   |TRUE   
+TRUE FALSE  |TRUE  
+FALSE TRUE  |TRUE  
+FALSE FALSE |FALSE  
+
+    NOT	    |
+------------|----
+     TRUE   |FALSE
+     FALSE  |TRUE     

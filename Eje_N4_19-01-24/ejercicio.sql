@@ -31,3 +31,4 @@ constraint fk_producto_categoria
 foreign key (categoriaId,numeroInventario)
 references categoria(categoriaId,numero)
 )
+go
