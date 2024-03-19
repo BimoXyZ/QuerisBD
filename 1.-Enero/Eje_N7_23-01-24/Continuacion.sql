@@ -12,7 +12,7 @@ SELECT IdCategoria, Iddescripcion FROM Categoria
 SELECT * FROM Producto
 
 INSERT INTO Producto
-VALUES(1,'Salchicha', 600, 12, 1)
+VALUES(5,'Salchicha', 700, 12, 1)
 
 INSERT INTO Producto
 VALUES(2,'Paleta Pollito', 22, 56, 8)
